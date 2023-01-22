@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&display=swap");
+@import "./colors";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body.light {
+    background-color: $clr-light;
+    color: $clr-dark;
+}
+
+body.dark {
+    background-color: $clr-dark;
+    color: $clr-light;
+}
+
+// Navbar
+
+.navbar {
+    &__main {
+        display: flex;
+        flex-direction: row;
+        padding: 65px 100px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+    }
+
+    &__navitems {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__navitem {
+        margin-right: 32px;
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    &__switcher {
+        margin-right: 0px;
+        cursor: pointer;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+
+    @media only screen and (max-width: 900px) {
+        &__main {
+            display: flex;
+            flex-direction: row;
+            padding: 36px 30px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__logo {
+            font-family: "Alegreya";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+        }
+
+        &__navitems {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__navitem {
+            margin-right: 32px;
+            font-family: "Alegreya";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        &__switcher {
+            margin-right: 0px;
+            cursor: pointer;
+        }
+
+        &__button {
+            background-color: transparent;
+            border: none;
+        }
+
+        &__lg {
+            display: none;
+        }
+    }
+}

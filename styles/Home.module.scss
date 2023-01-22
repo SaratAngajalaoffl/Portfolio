@@ -1,0 +1,130 @@
+@import "./colors";
+
+.hero_section {
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.left_section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 100px;
+}
+
+.right_section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.headshot {
+    border-radius: 170px 0px;
+    width: 341px;
+    height: 341px;
+}
+
+.socials {
+    align-self: center;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+.intro {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.name {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: $clr-primary;
+}
+
+.description {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .hero_section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .left_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-right: 0px;
+        margin-top: 40px;
+    }
+
+    .right_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headshot {
+        border-radius: 75px 0px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .socials {
+        align-self: center;
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 65px;
+    }
+
+    .intro {
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .name {
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 44px;
+        text-align: center;
+        color: $clr-primary;
+    }
+
+    .description {
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+    }
+}
