@@ -1,0 +1,77 @@
+@import "./colors";
+
+.about_section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 0px 100px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.right {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.content_header {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height */
+
+    color: $clr-primary;
+
+    margin: 40px 0px;
+}
+
+.content_body {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    margin: 10px 0px;
+}
+
+.roadmap_image {
+    height: 70vh;
+    width: auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .about_section {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .roadmap_image {
+        height: auto;
+        width: 90vw;
+    }
+
+    .right {
+        text-align: center;
+    }
+
+    .content_header {
+        margin: 40px 20px;
+    }
+
+    .content_body {
+        margin: 10px 20px;
+    }
+}

@@ -1,17 +1,14 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/About.module.scss";
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
-import headshot from "../public/assets/images/headshot.png";
 import hamburgerLight from "../public/assets/images/hamburger-light.svg";
 import hamburgerDark from "../public/assets/images/hamburger-dark.svg";
 import darkMode from "../public/assets/images/dark-mode.svg";
 import lightMode from "../public/assets/images/light-mode.svg";
-import githubLight from "../public/assets/images/github-light.svg";
-import githubDark from "../public/assets/images/github-dark.svg";
-import linkedinLight from "../public/assets/images/linkedin-light.svg";
-import linkedinDark from "../public/assets/images/linkedin-dark.svg";
+import roadmapLight from "../public/assets/images/roadmap-light.png";
+import roadmapDark from "../public/assets/images/roadmap-dark.png";
 import Link from "next/link";
 
 export default function Home() {
@@ -126,83 +123,43 @@ export default function Home() {
             </nav>
 
             <main className={styles.main}>
-                <section id="hero" className={styles.hero_section}>
-                    <div className={styles.left_section}>
-                        <p className={styles.intro}>
-                            Hi, I&apos;m{" "}
-                            <strong className={styles.name}>
-                                Sarat Angajala
-                            </strong>
-                        </p>
-                        <p className={styles.description}>
-                            I&apos;m an experienced web3 developer and full
-                            stack engineer with a strong background in
-                            blockchain technology and a passion for building
-                            decentralized applications.
-                        </p>
-                    </div>
-                    <div className={styles.right_section}>
-                        <Image
-                            className={styles.headshot}
-                            src={headshot}
-                            alt="headshot"
-                        />
-
+                <section id="about" className={styles.about_section}>
+                    <div className={styles.left}>
                         {isDarkMode() ? (
-                            <div className={styles.socials}>
-                                <a
-                                    href="https://github.com/SaratAngajalaoffl"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <Image
-                                        src={githubDark}
-                                        alt="github"
-                                        width={32}
-                                        height={32}
-                                    />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/saratangajala"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <Image
-                                        src={linkedinDark}
-                                        alt="linkedin"
-                                        width={32}
-                                        height={32}
-                                    />
-                                </a>
-                            </div>
+                            <Image
+                                src={roadmapDark}
+                                alt="roadmap"
+                                className={styles.roadmap_image}
+                            />
                         ) : (
-                            <div className={styles.socials}>
-                                <a
-                                    href="https://github.com/SaratAngajalaoffl"
-                                    rel="noreferrer"
-                                    target="_blank"
-                                >
-                                    <Image
-                                        src={githubLight}
-                                        alt="github"
-                                        width={32}
-                                        height={32}
-                                    />
-                                </a>
-                                <a
-                                    href="https://www.linkedin.com/in/saratangajala"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <Image
-                                        src={linkedinLight}
-                                        alt="linkedin"
-                                        width={32}
-                                        height={32}
-                                    />
-                                </a>
-                            </div>
+                            <Image
+                                src={roadmapLight}
+                                alt="roadmap"
+                                className={styles.roadmap_image}
+                            />
                         )}
+                    </div>
+                    <div className={styles.right}>
+                        <h1 className={styles.content_header}>
+                            Full Stack Developer / Blockchain Innovator
+                        </h1>
+                        <p className={styles.content_body}>
+                            I&apos;m a software developer with a passion for
+                            blockchain and a love for learning new technologies.
+                        </p>
+                        <p className={styles.content_body}>
+                            I started out as a full-stack intern and worked my
+                            way up to a full-time developer. After a year, I
+                            dove headfirst into blockchain and joined a
+                            blockchain firm as a founding member. I led all
+                            blockchain development and helped out with web and
+                            cloud stuff too.
+                        </p>
+                        <p className={styles.content_body}>
+                            When I&apos;m not coding, you can find me reading about
+                            the latest blockchain trends or experimenting with
+                            new programming languages.
+                        </p>
                     </div>
                 </section>
             </main>
