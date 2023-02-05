@@ -28,8 +28,12 @@ const ColorSchemeProvider: React.FunctionComponent<ProviderProps> = ({
     const [colorScheme, setColorScheme] = useState<"dark" | "light">("dark");
 
     useEffect(() => {
-        localStorage?.setItem("color-scheme", colorScheme);
+        setColorScheme(
+            localStorage.getItem("color-scheme") === "light" ? "light" : "dark"
+        );
+    }, []);
 
+    useEffect(() => {
         const bodyElement = document.querySelector("body");
 
         if (!bodyElement) return;
@@ -43,6 +47,13 @@ const ColorSchemeProvider: React.FunctionComponent<ProviderProps> = ({
         }
     }, [colorScheme]);
 
+    const changeColorScheme = (color: "light" | "dark") => {
+        if (typeof localStorage === undefined) return;
+
+        localStorage.setItem("color-scheme", color);
+        setColorScheme(color);
+    };
+
     const isDarkMode = useCallback(
         (): boolean => colorScheme === "dark",
         [colorScheme]
@@ -52,7 +63,7 @@ const ColorSchemeProvider: React.FunctionComponent<ProviderProps> = ({
         <colorSchemeContext.Provider
             value={{
                 currentColorScheme: colorScheme,
-                setColorScheme,
+                setColorScheme: changeColorScheme,
                 isDarkMode,
             }}
         >
