@@ -18,12 +18,19 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
                 <title>Sarat Angajala - Portofolio</title>
                 <meta
                     name="description"
-                    content="Portofolio for Sarat Angajala"
+                    content="I'm a software developer with a passion for blockchain and a love for learning new technologies. I started out as a full-stack intern and worked my way up to a full-time developer. After a year, I dove headfirst into blockchain and joined a blockchain firm as a founding member. I led all blockchain development and helped out with web and cloud stuff too. When I'm not coding, you can find me reading about the latest blockchain trends or experimenting with new programming languages."
                 />
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1, maximum-scale=1"
                 />
+                <meta
+                    property="og:image"
+                    content="/assets/images/social-thumb.png"
+                />
+                <meta property="og:image:type" content="image/png" />
+                <meta property="og:image:width" content="1024" />
+                <meta property="og:image:height" content="1024" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
@@ -61,6 +68,12 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
                 </ul>
                 <ul className="navbar__navitems navbar__sm">
                     <li className="navbar__navitem">
+                        <Link href="/work">Work</Link>
+                    </li>
+                    <li className="navbar__navitem">
+                        <Link href="/contact">Contact</Link>
+                    </li>
+                    <li className="navbar__navitem">
                         {isDarkMode() ? (
                             <Image
                                 onClick={() => setColorScheme("light")}
@@ -74,25 +87,6 @@ const Layout = ({ children }: { children: React.ReactElement }) => {
                                 onClick={() => setColorScheme("dark")}
                                 src={darkMode}
                                 alt="dark-mode"
-                                width={24}
-                                height={24}
-                            />
-                        )}
-                    </li>
-                    <li className="navbar__navitem navbar__switcher">
-                        {isDarkMode() ? (
-                            <Image
-                                onClick={() => setColorScheme("light")}
-                                src={hamburgerLight}
-                                alt="hamburger"
-                                width={24}
-                                height={24}
-                            />
-                        ) : (
-                            <Image
-                                onClick={() => setColorScheme("dark")}
-                                src={hamburgerDark}
-                                alt="hamburger"
                                 width={24}
                                 height={24}
                             />

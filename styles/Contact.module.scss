@@ -1,2 +1,286 @@
+@import "./colors";
+
 .contact_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_container {
+    width: 836px;
+}
+
+.form_header {
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+
+    color: $clr-primary;
+
+    margin: 40px 10px;
+}
+
+.horizontal_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form_input_label {
+    display: flex;
+    flex-direction: column;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    flex: 1;
+
+    margin: 20px 0px;
+}
+
+.form_input_half_dark {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    margin-right: 20px;
+    padding: 10px;
+
+    color: $clr-light;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.form_input_half_light {
+    background: #ffffff;
+    border-radius: 10px;
+
+    margin-right: 20px;
+    padding: 10px;
+
+    color: $clr-dark;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.form_input_dark {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    margin-right: 20px;
+    padding: 10px;
+
+    color: $clr-light;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.form_input_light {
+    background: #ffffff;
+    border-radius: 10px;
+
+    margin-right: 20px;
+    padding: 10px;
+
+    color: $clr-dark;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.submit_btn_light {
+    margin: 20px 0px;
+    width: 200px;
+    height: 48.53px;
+
+    background: $clr-primary;
+    color: $clr-light;
+    border-radius: 10px;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.submit_btn_dark {
+    margin: 20px 0px;
+    width: 200px;
+    height: 48.53px;
+
+    background: $clr-primary;
+    color: $clr-dark;
+    border-radius: 10px;
+
+    font-family: "Alegreya";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .contact_section {
+        padding: 20px;
+    }
+
+    .form_container {
+        width: unset;
+    }
+
+    .form_header {
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+
+        text-align: start;
+
+        color: $clr-primary;
+
+        margin: 0px;
+    }
+
+    .form_input_label {
+        display: flex;
+        flex-direction: column;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        margin: 20px 0px;
+
+        flex: 1;
+    }
+
+    .form_input_half_dark {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        padding: 10px;
+
+        color: $clr-light;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .form_input_half_light {
+        background: #ffffff;
+        border-radius: 10px;
+
+        margin-right: 20px;
+        padding: 10px;
+
+        color: $clr-dark;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .form_input_dark {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+
+        margin-right: 20px;
+        padding: 10px;
+
+        color: $clr-light;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .form_input_light {
+        background: #ffffff;
+        border-radius: 10px;
+
+        margin-right: 20px;
+        padding: 10px;
+
+        color: $clr-dark;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .submit_btn_light {
+        margin: 20px 0px;
+        height: 48.53px;
+
+        background: $clr-primary;
+        color: $clr-light;
+        border-radius: 10px;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+
+        cursor: pointer;
+    }
+
+    .submit_btn_dark {
+        margin: 20px 0px;
+
+        height: 48.53px;
+
+        background: $clr-primary;
+        color: $clr-dark;
+        border-radius: 10px;
+
+        font-family: "Alegreya";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+
+        cursor: pointer;
+    }
 }
